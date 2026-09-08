@@ -7,7 +7,7 @@ def reverse_complement(seq):
 
 def kmerize(seq, k):
     """Generate canonical k-mers of length k."""
-    
+
     if not seq:
         raise ValueError("Sequence must not be empty.")
 
@@ -80,7 +80,14 @@ class MinHashSketch:
         if not self.hashes or not other.hashes:
             return 0.0
 
-        intersection = self.hashes & other.hashes
-        union = self.hashes | other.hashes
+        merged = sorted(self.hashes | other.hashes)
+        sketch_size = min(self.size, other.size)
 
-        return len(intersection) / len(union)
+        if len(merged) <= sketch_size:
+            intersection = self.hashes & other.hashes
+            return len(intersection) / len(merged)
+
+        selected = set(merged[:sketch_size])
+        common = len(selected & self.hashes & other.hashes)
+
+        return common / sketch_size
