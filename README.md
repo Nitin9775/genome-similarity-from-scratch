@@ -1,4 +1,5 @@
 ## Current Implementation
+![Tests](https://img.shields.io/badge/tests-51%20passed-brightgreen)
 
 The project currently supports:
 
