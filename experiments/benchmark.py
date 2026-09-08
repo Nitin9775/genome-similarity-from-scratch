@@ -20,13 +20,16 @@ if __name__ == "__main__":
     genome1 = "data/ecoli.fasta"
     genome2 = "data/shigella.fasta"
 
-    jaccard, distance, elapsed = benchmark_genome_pair(
+    for k in [15, 21, 31]:
+        jaccard, distance, elapsed = benchmark_genome_pair(
         genome1,
         genome2,
-        k=15,
+        k=k,
         size=1000,
     )
 
-    print(f"Jaccard similarity: {jaccard}")
-    print(f"Mash distance: {distance}")
-    print(f"Runtime: {elapsed:.4f} seconds")
+        print(f"k={k}")
+        print(f"Jaccard similarity: {jaccard}")
+        print(f"Mash distance: {distance}")
+        print(f"Runtime: {elapsed:.4f} seconds")
+        print()
