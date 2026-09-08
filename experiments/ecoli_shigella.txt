@@ -7,3 +7,20 @@ Jaccard similarity: 0.539
 Mash distance: 0.02373502549132912
 
 Benchmark runtime: 122.4443 seconds
+
+Parameter sweep:
+
+k=15
+Jaccard similarity: 0.539
+Mash distance: 0.02373502549132912
+Runtime: 126.6260 seconds
+
+k=21
+Jaccard similarity: 0.482
+Mash distance: 0.02047888148788031
+Runtime: 127.9721 seconds
+
+k=31
+Jaccard similarity: 0.407
+Mash distance: 0.017653377132640282
+Runtime: 129.1188 seconds
