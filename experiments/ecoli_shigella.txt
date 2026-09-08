@@ -5,3 +5,5 @@ sketch size: 1000
 
 Jaccard similarity: 0.539
 Mash distance: 0.02373502549132912
+
+Benchmark runtime: 122.4443 seconds
