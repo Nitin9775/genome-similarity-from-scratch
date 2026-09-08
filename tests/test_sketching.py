@@ -253,8 +253,9 @@ def test_kmerize_lowercase_sequence():
     assert result == ["ATG", "GCA"]
 
 def test_kmerize_invalid_nucleotide():
-    with pytest.raises(ValueError):
-        list(kmerize("ATGX", 3))
+    result = list(kmerize("ATGX", 3))
+
+    assert result == ["ATG"]
 
 def test_kmerize_normalizes_lowercase():
     uppercase = list(kmerize("ATGC", 3))

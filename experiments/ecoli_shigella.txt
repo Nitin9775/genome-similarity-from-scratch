@@ -1,0 +1,7 @@
+E. coli K-12 vs Shigella
+
+k-mer size: 15
+sketch size: 1000
+
+Jaccard similarity: 0.5117157974300831
+Mash distance: 0.026005600404657464

@@ -7,18 +7,21 @@ def reverse_complement(seq):
 
 def kmerize(seq, k):
     """Generate canonical k-mers of length k."""
-    seq = seq.upper()
-
-    if any(base not in "ACGT" for base in seq):
-        raise ValueError("Sequence must contain only A, C, G, T.")
+    
     if not seq:
         raise ValueError("Sequence must not be empty.")
 
     if k <= 0:
         raise ValueError("k must be greater than 0.")
 
+    seq = seq.upper()
+
     for i in range(len(seq) - k + 1):
         kmer = seq[i:i + k]
+
+        if any(base not in "ACGT" for base in kmer):
+            continue
+
         reverse = reverse_complement(kmer)
         yield min(kmer, reverse)
 
