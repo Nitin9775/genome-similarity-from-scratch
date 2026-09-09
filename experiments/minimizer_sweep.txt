@@ -21,3 +21,13 @@ Runtime: 12.8791 seconds
 w=100
 Minimizers: 89,107
 Runtime: 12.2382 seconds
+
+Note:
+The streaming minimizer implementation processes the sequence without
+materializing the complete k-mer hash list.
+
+For E. coli:
+Full MinHash sketch: 57.17 seconds
+Streaming minimizer generation: 14.68 seconds
+Speedup: 3.90x
+Runtime reduction: 74.33%
