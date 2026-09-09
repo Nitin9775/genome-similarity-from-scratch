@@ -72,3 +72,13 @@ Streaming minimizer generation (E. coli, k=15, w=10): 14.68 seconds
 
 Minimizer speedup: 3.90x
 Runtime reduction: 74.33%
+
+MinHash vs Minimizer comparison
+
+k=15
+
+MinHash Jaccard similarity: 0.539
+Minimizer Jaccard similarity (w=10): 0.5277813969464745
+
+Difference in Jaccard similarity:
+0.539 - 0.5277813969464745 = 0.0112186030535255
