@@ -33,6 +33,7 @@ if __name__ == "__main__":
 
         jaccard = ecoli_sketch.jaccard(shigella_sketch)
         reduction = 100 * (1 - len(ecoli_sketch.hashes) / total_kmers)
+        retention = 100 * len(ecoli_sketch.hashes) / total_kmers
         
 
         elapsed = time.perf_counter() - start
@@ -42,6 +43,7 @@ if __name__ == "__main__":
         print(f"Shigella minimizers: {len(shigella_sketch.hashes):,}")
         print(f"Jaccard similarity: {jaccard}")
         print(f"E. coli reduction: {reduction:.2f}%")
+        print(f"E. coli retention: {retention:.2f}%")
         print(f"Jaccard change from w=5: {jaccard - 0.533537931030026:.6f}")
         print(f"Relative Jaccard change: {(jaccard - 0.533537931030026) / 0.533537931030026 * 100:.2f}%")
         print(f"Runtime: {elapsed:.4f} seconds")
