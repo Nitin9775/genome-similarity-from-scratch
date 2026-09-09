@@ -1,3 +1,14 @@
+Real genome CLI verification
+
+Command:
+python -m src.cli data/ecoli.fasta data/shigella.fasta --k 15 --size 1000
+
+Output:
+Jaccard similarity: 0.539
+Mash distance: 0.02373502549132912
+
+
+
 E. coli K-12 vs Shigella
 
 k-mer size: 15
