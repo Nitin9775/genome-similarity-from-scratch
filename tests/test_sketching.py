@@ -411,3 +411,11 @@ def test_minimizers_window_one():
     result = list(minimizers(seq, 3, 1))
 
     assert len(result) > 0
+
+def test_minimizer_sketch_identical_genomes():
+    sequence = "ATGCGTACGTTAGCGATCGATCGTACG"
+
+    sketch1 = sketch_sequence_with_minimizers(sequence, k=5, w=4)
+    sketch2 = sketch_sequence_with_minimizers(sequence, k=5, w=4)
+
+    assert sketch1.jaccard(sketch2) == 1.0
