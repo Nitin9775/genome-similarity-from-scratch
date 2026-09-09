@@ -374,3 +374,17 @@ def test_minimizers_reproducible():
     result2 = list(minimizers(seq, 3, 4))
 
     assert result1 == result2
+
+def test_minimizers_larger_sequence():
+    seq = "ATGCGTACGTTAGCGATCGATCGTACG"
+
+    result = list(minimizers(seq, 5, 4))
+
+    assert result == [
+        "GCGTA",
+        "AACGT",
+        "CGTTA",
+        "AGCGA",
+        "CGATC",
+        "ACGAT",
+    ]
