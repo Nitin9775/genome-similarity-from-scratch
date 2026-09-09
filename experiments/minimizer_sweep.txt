@@ -46,3 +46,17 @@ E. coli reduction: 98.08%
 Jaccard change from w=5: -0.039247
 Relative Jaccard change: -7.36%
 Runtime: 27.9749 seconds
+
+Summary
+
+Increasing the minimizer window size substantially reduces the number
+of selected minimizers.
+
+At w=100, the minimizer set is reduced by 98.08% relative to the
+total number of canonical k-mers in E. coli.
+
+However, the observed E. coli vs Shigella Jaccard similarity decreases
+from 0.5335 at w=5 to 0.4943 at w=100.
+
+This demonstrates a trade-off between minimizer reduction and the
+similarity signal retained by the sketch.

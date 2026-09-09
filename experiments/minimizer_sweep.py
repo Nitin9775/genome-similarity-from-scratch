@@ -43,5 +43,6 @@ if __name__ == "__main__":
         print(f"Jaccard similarity: {jaccard}")
         print(f"E. coli reduction: {reduction:.2f}%")
         print(f"Jaccard change from w=5: {jaccard - 0.533537931030026:.6f}")
+        print(f"Relative Jaccard change: {(jaccard - 0.533537931030026) / 0.533537931030026 * 100:.2f}%")
         print(f"Runtime: {elapsed:.4f} seconds")
         print()
