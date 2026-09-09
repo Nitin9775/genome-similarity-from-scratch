@@ -59,3 +59,8 @@ MinHash sketch (k=15, size=1000): 71.13 seconds
 Minimizer runtime reduction: 74.37%
 
 Shigella minimizer sketch (k=15, w=10): 18.16 seconds
+
+Streaming minimizer runtime:
+
+E. coli (k=15, w=10): 17.63 seconds
+Shigella (k=15, w=10): 15.40 seconds
