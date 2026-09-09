@@ -451,3 +451,11 @@ def test_minimizer_jaccard_decreases_with_larger_window():
     sketch2_w10 = sketch_sequence_with_minimizers(sequence2, k=5, w=10)
 
     assert sketch1_w10.jaccard(sketch2_w10) <= sketch1_w5.jaccard(sketch2_w5)
+
+def test_minimizer_sweep_is_reproducible():
+    sequence = "ATGCGTACGTAGCTAGCTAGCTAGCTAGCTAGCTA"
+
+    sketch_a = sketch_sequence_with_minimizers(sequence, k=5, w=10)
+    sketch_b = sketch_sequence_with_minimizers(sequence, k=5, w=10)
+
+    assert sketch_a.hashes == sketch_b.hashes
