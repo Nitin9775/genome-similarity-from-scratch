@@ -432,3 +432,10 @@ def test_minimizer_sketch_matches_selected_minimizers():
     sketch = sketch_sequence_with_minimizers(sequence, k=5, w=4)
 
     assert len(sketch.hashes) == len(set(selected))
+
+def test_minimizers_window_larger_than_kmers():
+    seq = "ATGCGTACG"
+
+    result = list(minimizers(seq, 3, 100))
+
+    assert len(result) == 1

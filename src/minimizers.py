@@ -55,7 +55,7 @@ def minimizers(seq, k, w):
 
         window.append((i, (hash_value, canonical_kmer)))
 
-        if i >= w - 1 and window:
+        if i >= min(w, len(seq) - k + 1) - 1 and window:
             current = window[0][1]
 
             if current != last_minimizer:
