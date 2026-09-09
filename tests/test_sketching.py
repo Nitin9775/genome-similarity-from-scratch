@@ -333,3 +333,36 @@ def test_fasta_sequence_can_be_sketches():
 
     assert len(sketch.hashes) > 0
     assert len(sketch.hashes) <= 10
+
+from src.minimizers import minimizers
+
+
+def test_minimizers_basic():
+    result = list(minimizers("ATGCATGCATGC", 3, 4))
+
+    assert result == ["GCA"]
+
+
+def test_minimizers_reverse_complement():
+    seq1 = "ATGCATGCATGC"
+    seq2 = "GCATGCATGCAT"
+
+    assert list(minimizers(seq1, 3, 4)) == list(
+        minimizers(seq2, 3, 4)
+    )
+
+
+def test_minimizers_invalid_k():
+    try:
+        list(minimizers("ATGC", 0, 2))
+        assert False
+    except ValueError:
+        assert True
+
+
+def test_minimizers_invalid_window():
+    try:
+        list(minimizers("ATGC", 3, 0))
+        assert False
+    except ValueError:
+        assert True
