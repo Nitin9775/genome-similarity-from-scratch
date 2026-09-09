@@ -4,16 +4,20 @@ k=15
 
 w=5
 Minimizers: 1,494,480
-Runtime: 20.6088 seconds
+Runtime: 19.5202 seconds
 
 w=10
 Minimizers: 816,575
-Runtime: 21.1749 seconds
+Runtime: 20.8615 seconds
 
 w=20
 Minimizers: 428,206
-Runtime: 17.2510 seconds
+Runtime: 13.1448 seconds
 
 w=50
 Minimizers: 176,237
-Runtime: 20.7636 seconds
+Runtime: 12.8791 seconds
+
+w=100
+Minimizers: 89,107
+Runtime: 12.2382 seconds

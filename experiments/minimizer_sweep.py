@@ -6,7 +6,7 @@ from src.sketching import sketch_fasta_with_minimizers
 if __name__ == "__main__":
     genome = "data/ecoli.fasta"
 
-    for w in [5, 10, 20, 50]:
+    for w in [5, 10, 20, 50, 100]:
         start = time.perf_counter()
 
         sketch = sketch_fasta_with_minimizers(
