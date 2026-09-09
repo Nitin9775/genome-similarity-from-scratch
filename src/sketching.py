@@ -103,3 +103,8 @@ def sketch_sequence_with_minimizers(sequence, k=15, w=10):
         sketch.add(kmer)
 
     return sketch
+
+def sketch_fasta_with_minimizers(filepath, k=15, w=10):
+    """Create a minimizer-based sketch from a FASTA file."""
+    sequence = read_fasta(filepath)
+    return sketch_sequence_with_minimizers(sequence, k=k, w=w)

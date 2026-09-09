@@ -1,4 +1,4 @@
-from src.sketching import kmerize, MinHashSketch, read_fasta, sketch_fasta, sketch_sequence, sketch_sequence_with_minimizers 
+from src.sketching import kmerize, MinHashSketch, read_fasta, sketch_fasta, sketch_fasta_with_minimizers, sketch_sequence, sketch_sequence_with_minimizers 
 from src.ani_estimator import mash_distance
 import pytest
 import subprocess
@@ -395,3 +395,12 @@ def test_sketch_sequence_with_minimizers():
     sketch = sketch_sequence_with_minimizers(sequence, k=5, w=4)
 
     assert len(sketch.hashes) == 6
+
+def test_sketch_fasta_with_minimizers():
+    sketch = sketch_fasta_with_minimizers(
+        "data/test.fasta",
+        k=3,
+        w=4,
+    )
+
+    assert len(sketch.hashes) > 0
