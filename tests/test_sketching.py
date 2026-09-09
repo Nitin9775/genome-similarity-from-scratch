@@ -340,7 +340,7 @@ from src.minimizers import minimizers
 def test_minimizers_basic():
     result = list(minimizers("ATGCATGCATGC", 3, 4))
 
-    assert result == ["GCA"]
+    assert result == ["ATG"]
 
 
 def test_minimizers_reverse_complement():

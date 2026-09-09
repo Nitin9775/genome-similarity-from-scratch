@@ -1,4 +1,5 @@
 from collections import deque
+import hashlib
 
 
 def minimizers(seq, k, w):
@@ -37,7 +38,10 @@ def minimizers(seq, k, w):
             continue
 
         canonical_kmer = canonical(kmer)
-        hash_value = hash(canonical_kmer)
+        hash_value = int(
+            hashlib.md5(canonical_kmer.encode()).hexdigest(),
+            16
+        )
         hashes.append((hash_value, canonical_kmer))
 
     w = min(w, len(hashes))
