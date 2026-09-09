@@ -366,3 +366,11 @@ def test_minimizers_invalid_window():
         assert False
     except ValueError:
         assert True
+
+def test_minimizers_reproducible():
+    seq = "ATGCATGCATGCATGC"
+
+    result1 = list(minimizers(seq, 3, 4))
+    result2 = list(minimizers(seq, 3, 4))
+
+    assert result1 == result2
