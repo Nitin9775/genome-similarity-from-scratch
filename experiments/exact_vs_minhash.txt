@@ -1,0 +1,8 @@
+Exact Jaccard vs MinHash
+
+k=15
+Sketch size=1000
+
+Exact Jaccard: 0.6666666666666666
+MinHash Jaccard: 0.6666666666666666
+Absolute error: 0.0
