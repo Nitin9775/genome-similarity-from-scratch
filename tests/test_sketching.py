@@ -1,4 +1,4 @@
-from src.sketching import kmerize, MinHashSketch, read_fasta, sketch_fasta, sketch_sequence 
+from src.sketching import kmerize, MinHashSketch, read_fasta, sketch_fasta, sketch_sequence, sketch_sequence_with_minimizers 
 from src.ani_estimator import mash_distance
 import pytest
 import subprocess
@@ -388,3 +388,10 @@ def test_minimizers_larger_sequence():
         "CGATC",
         "ACGAT",
     ]
+
+def test_sketch_sequence_with_minimizers():
+    sequence = "ATGCGTACGTTAGCGATCGATCGTACG"
+
+    sketch = sketch_sequence_with_minimizers(sequence, k=5, w=4)
+
+    assert len(sketch.hashes) == 6

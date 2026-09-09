@@ -1,4 +1,5 @@
 import hashlib
+from src.minimizers import minimizers
 
 def reverse_complement(seq):
     complement = str.maketrans("ACGTacgt", "TGCAtgca")
@@ -91,3 +92,14 @@ class MinHashSketch:
         common = len(selected & self.hashes & other.hashes)
 
         return common / sketch_size
+
+def sketch_sequence_with_minimizers(sequence, k=15, w=10):
+    """Create a sketch from minimizers."""
+    selected = list(minimizers(sequence, k, w))
+
+    sketch = MinHashSketch(size=len(selected))
+
+    for kmer in selected:
+        sketch.add(kmer)
+
+    return sketch
