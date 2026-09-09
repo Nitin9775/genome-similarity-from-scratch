@@ -64,3 +64,11 @@ Streaming minimizer runtime:
 
 E. coli (k=15, w=10): 17.63 seconds
 Shigella (k=15, w=10): 15.40 seconds
+
+Corrected runtime comparison:
+
+Full MinHash sketch (E. coli, k=15, size=1000): 57.17 seconds
+Streaming minimizer generation (E. coli, k=15, w=10): 14.68 seconds
+
+Minimizer speedup: 3.90x
+Runtime reduction: 74.33%
