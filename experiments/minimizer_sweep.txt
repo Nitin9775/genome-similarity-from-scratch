@@ -6,28 +6,33 @@ w=5
 E. coli minimizers: 1,494,480
 Shigella minimizers: 1,436,830
 Jaccard similarity: 0.533537931030026
-Runtime: 38.9187 seconds
+E. coli reduction: 67.80%
+Runtime: 35.5296 seconds
 
 w=10
 E. coli minimizers: 816,575
 Shigella minimizers: 784,905
 Jaccard similarity: 0.5277813969464745
-Runtime: 30.3833 seconds
+E. coli reduction: 82.41%
+Runtime: 31.3255 seconds
 
 w=20
 E. coli minimizers: 428,206
 Shigella minimizers: 412,133
 Jaccard similarity: 0.5172819648577457
-Runtime: 28.6268 seconds
+E. coli reduction: 90.77%
+Runtime: 29.5331 seconds
 
 w=50
 E. coli minimizers: 176,237
 Shigella minimizers: 169,840
 Jaccard similarity: 0.5023203194077557
-Runtime: 30.4025 seconds
+E. coli reduction: 96.20%
+Runtime: 29.7729 seconds
 
 w=100
 E. coli minimizers: 89,107
 Shigella minimizers: 85,667
 Jaccard similarity: 0.49429136854924643
-Runtime: 26.8571 seconds
+E. coli reduction: 98.08%
+Runtime: 28.0835 seconds
