@@ -1,5 +1,5 @@
 ## Current Implementation
-![Tests](https://img.shields.io/badge/tests-65%20passed-brightgreen)
+![Tests](https://img.shields.io/badge/tests-66%20passed-brightgreen)
 [![Tests](https://github.com/Nitin9775/genome-similarity-from-scratch/actions/workflows/tests.yml/badge.svg)](https://github.com/Nitin9775/genome-similarity-from-scratch/actions/workflows/tests.yml)
 
 The project currently supports:
