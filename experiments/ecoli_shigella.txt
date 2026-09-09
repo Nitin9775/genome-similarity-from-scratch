@@ -35,3 +35,18 @@ k=31
 Jaccard similarity: 0.407
 Mash distance: 0.017653377132640282
 Runtime: 129.1188 seconds
+
+Minimizer analysis:
+
+k=15
+window size: 10
+
+E. coli canonical k-mers: 4,641,638
+E. coli minimizers: 816,575
+E. coli reduction: 82.41%
+
+Shigella canonical k-mers: 4,828,786
+Shigella minimizers: 784,908
+Shigella reduction: 83.75%
+
+Minimizer Jaccard similarity: 0.5277813969464745
