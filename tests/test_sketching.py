@@ -424,3 +424,11 @@ def test_minimizers_invalid_nucleotide():
     result = list(minimizers("ATGXATGC", 3, 2))
 
     assert all("X" not in kmer for kmer in result)
+
+def test_minimizer_sketch_matches_selected_minimizers():
+    sequence = "ATGCGTACGTTAGCGATCGATCGTACG"
+
+    selected = list(minimizers(sequence, k=5, w=4))
+    sketch = sketch_sequence_with_minimizers(sequence, k=5, w=4)
+
+    assert len(sketch.hashes) == len(set(selected))
