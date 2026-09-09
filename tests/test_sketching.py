@@ -439,3 +439,15 @@ def test_minimizers_window_larger_than_kmers():
     result = list(minimizers(seq, 3, 100))
 
     assert len(result) == 1
+
+def test_minimizer_jaccard_decreases_with_larger_window():
+    sequence1 = "ATGCGTACGTAGCTAGCTAGCTAGCTAGCTAGCTA"
+    sequence2 = "ATGCGTACGTAGCTAGCTAGATAGCTAGCTAGCTA"
+
+    sketch1_w5 = sketch_sequence_with_minimizers(sequence1, k=5, w=5)
+    sketch2_w5 = sketch_sequence_with_minimizers(sequence2, k=5, w=5)
+
+    sketch1_w10 = sketch_sequence_with_minimizers(sequence1, k=5, w=10)
+    sketch2_w10 = sketch_sequence_with_minimizers(sequence2, k=5, w=10)
+
+    assert sketch1_w10.jaccard(sketch2_w10) <= sketch1_w5.jaccard(sketch2_w5)
