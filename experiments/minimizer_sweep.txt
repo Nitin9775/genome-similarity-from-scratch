@@ -1,0 +1,19 @@
+E. coli minimizer parameter sweep
+
+k=15
+
+w=5
+Minimizers: 1,494,480
+Runtime: 20.6088 seconds
+
+w=10
+Minimizers: 816,575
+Runtime: 21.1749 seconds
+
+w=20
+Minimizers: 428,206
+Runtime: 17.2510 seconds
+
+w=50
+Minimizers: 176,237
+Runtime: 20.7636 seconds
