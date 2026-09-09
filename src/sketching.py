@@ -108,3 +108,13 @@ def sketch_fasta_with_minimizers(filepath, k=15, w=10):
     """Create a minimizer-based sketch from a FASTA file."""
     sequence = read_fasta(filepath)
     return sketch_sequence_with_minimizers(sequence, k=k, w=w)
+
+def exact_jaccard(sequence1, sequence2, k):
+    """Calculate exact Jaccard similarity between two k-mer sets."""
+    kmers1 = set(kmerize(sequence1, k))
+    kmers2 = set(kmerize(sequence2, k))
+
+    if not kmers1 and not kmers2:
+        return 0.0
+
+    return len(kmers1 & kmers2) / len(kmers1 | kmers2)

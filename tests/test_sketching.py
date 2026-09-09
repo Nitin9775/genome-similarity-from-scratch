@@ -1,4 +1,4 @@
-from src.sketching import kmerize, MinHashSketch, read_fasta, sketch_fasta, sketch_fasta_with_minimizers, sketch_sequence, sketch_sequence_with_minimizers 
+from src.sketching import exact_jaccard, kmerize, MinHashSketch, read_fasta, sketch_fasta, sketch_fasta_with_minimizers, sketch_sequence, sketch_sequence_with_minimizers 
 from src.ani_estimator import mash_distance
 import pytest
 import subprocess
@@ -459,3 +459,10 @@ def test_minimizer_sweep_is_reproducible():
     sketch_b = sketch_sequence_with_minimizers(sequence, k=5, w=10)
 
     assert sketch_a.hashes == sketch_b.hashes
+
+def test_exact_jaccard_identical_sequences():
+    sequence = "ATGCGTACGTAGCTAGCTAG"
+
+    result = exact_jaccard(sequence, sequence, k=5)
+
+    assert result == 1.0
