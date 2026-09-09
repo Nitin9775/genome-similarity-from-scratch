@@ -23,41 +23,37 @@ def minimizers(seq, k, w):
     if len(seq) < k:
         return
 
+    complement = str.maketrans("ACGT", "TGCA")
+
     def canonical(kmer):
-        complement = str.maketrans("ACGT", "TGCA")
         reverse = kmer.translate(complement)[::-1]
         return min(kmer, reverse)
 
-    hashes = []
+    window = deque()
+    last_minimizer = None
 
     for i in range(len(seq) - k + 1):
         kmer = seq[i:i + k]
 
         if any(base not in "ACGT" for base in kmer):
-            hashes.append(None)
+            window.clear()
+            last_minimizer = None
             continue
 
         canonical_kmer = canonical(kmer)
+
         hash_value = int(
             hashlib.md5(canonical_kmer.encode()).hexdigest(),
             16
         )
-        hashes.append((hash_value, canonical_kmer))
 
-    w = min(w, len(hashes))
-
-    window = deque()
-    last_minimizer = None
-
-    for i, value in enumerate(hashes):
         while window and window[0][0] <= i - w:
             window.popleft()
 
-        if value is not None:
-            while window and window[-1][1][0] >= value[0]:
-                window.pop()
+        while window and window[-1][1][0] >= hash_value:
+            window.pop()
 
-            window.append((i, value))
+        window.append((i, (hash_value, canonical_kmer)))
 
         if i >= w - 1 and window:
             current = window[0][1]
