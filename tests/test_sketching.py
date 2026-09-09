@@ -404,3 +404,10 @@ def test_sketch_fasta_with_minimizers():
     )
 
     assert len(sketch.hashes) > 0
+
+def test_minimizers_window_one():
+    seq = "ATGCGTACG"
+
+    result = list(minimizers(seq, 3, 1))
+
+    assert len(result) > 0
