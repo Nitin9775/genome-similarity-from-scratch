@@ -419,3 +419,8 @@ def test_minimizer_sketch_identical_genomes():
     sketch2 = sketch_sequence_with_minimizers(sequence, k=5, w=4)
 
     assert sketch1.jaccard(sketch2) == 1.0
+
+def test_minimizers_invalid_nucleotide():
+    result = list(minimizers("ATGXATGC", 3, 2))
+
+    assert all("X" not in kmer for kmer in result)
