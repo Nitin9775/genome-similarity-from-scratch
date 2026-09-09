@@ -11,7 +11,7 @@ relying on existing tools.
 
 ## Current Implementation
 
-![Tests](https://img.shields.io/badge/tests-66%20passed-brightgreen)
+![Tests](https://img.shields.io/badge/tests-68%20passed-brightgreen)
 
 [![Tests](https://github.com/Nitin9775/genome-similarity-from-scratch/actions/workflows/tests.yml/badge.svg)](https://github.com/Nitin9775/genome-similarity-from-scratch/actions/workflows/tests.yml)
 
