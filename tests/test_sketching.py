@@ -466,3 +466,16 @@ def test_exact_jaccard_identical_sequences():
     result = exact_jaccard(sequence, sequence, k=5)
 
     assert result == 1.0
+
+def test_minhash_approximates_exact_jaccard():
+    sequence1 = "ATGCGTACGTAGCTAGCTAGCTAG"
+    sequence2 = "ATGCGTACGTAGCTAGCTAGATAG"
+
+    exact = exact_jaccard(sequence1, sequence2, k=5)
+
+    sketch1 = sketch_sequence(sequence1, k=5, size=100)
+    sketch2 = sketch_sequence(sequence2, k=5, size=100)
+
+    estimated = sketch1.jaccard(sketch2)
+
+    assert abs(estimated - exact) < 0.2
