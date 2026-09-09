@@ -1,0 +1,9 @@
+MinHash Benchmark: E. coli
+
+k=15
+
+Sketch size | Stored hashes | Runtime
+100         | 100           | 22.3457 s
+500         | 500           | 41.8818 s
+1000        | 1000          | 55.6632 s
+5000        | 5000          | 786.4220 s
