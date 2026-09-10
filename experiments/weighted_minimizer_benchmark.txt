@@ -1,0 +1,8 @@
+Ordinary vs Weighted Minimizer Benchmark: E. coli
+k=15, w=10
+
+Ordinary minimizers:  816,575
+Ordinary runtime:     16.4811 seconds
+
+Weighted minimizers:  844,270
+Weighted runtime:     15.9205 seconds
