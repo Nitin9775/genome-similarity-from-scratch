@@ -1,0 +1,9 @@
+MinHash vs Minimizer Accuracy
+k=15, sketch_size=1000, w=10
+
+Exact Jaccard:       0.539657
+MinHash Jaccard:     0.539000
+MinHash error:       0.000657
+
+Minimizer Jaccard:   0.527781
+Minimizer error:     0.011876
