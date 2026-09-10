@@ -1,0 +1,33 @@
+Minimizer Accuracy Sweep
+k: 15
+Exact Jaccard: 0.539657
+
+Window size:   5
+  E. coli minimizers:   1,494,480
+  Shigella minimizers:  1,436,830
+  MinHash Jaccard:       0.533538
+  Absolute error:        0.006119
+
+Window size:  10
+  E. coli minimizers:   816,575
+  Shigella minimizers:  784,905
+  MinHash Jaccard:       0.527781
+  Absolute error:        0.011876
+
+Window size:  20
+  E. coli minimizers:   428,206
+  Shigella minimizers:  412,133
+  MinHash Jaccard:       0.517282
+  Absolute error:        0.022375
+
+Window size:  50
+  E. coli minimizers:   176,237
+  Shigella minimizers:  169,840
+  MinHash Jaccard:       0.502320
+  Absolute error:        0.037337
+
+Window size: 100
+  E. coli minimizers:   89,107
+  Shigella minimizers:  85,667
+  MinHash Jaccard:       0.494291
+  Absolute error:        0.045366
