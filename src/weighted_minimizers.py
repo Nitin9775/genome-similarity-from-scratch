@@ -51,9 +51,11 @@ def weighted_minimizers(seq, k, w):
             16,
         )
 
+        weighted_hash = hash_value // score(canonical_kmer)
+
         weighted_value = (
+            weighted_hash,
             hash_value,
-            -score(canonical_kmer),
             canonical_kmer,
         )
 

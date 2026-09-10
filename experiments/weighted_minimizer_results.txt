@@ -1,0 +1,20 @@
+Ordinary vs Weighted Minimizer Results
+Dataset: E. coli vs Shigella
+k=15, w=10
+
+Accuracy:
+Exact Jaccard:              0.539657
+Ordinary minimizer Jaccard: 0.527781
+Ordinary error:             0.011876
+Weighted minimizer Jaccard: 0.520648
+Weighted error:             0.019010
+
+Benchmark (E. coli):
+Ordinary minimizers:  816,575
+Ordinary runtime:     15.0887 seconds
+Weighted minimizers:  844,940
+Weighted runtime:     15.1337 seconds
+
+Conclusion:
+The simple complexity-based weighting changed minimizer selection
+but did not improve Jaccard accuracy or runtime on this dataset.
