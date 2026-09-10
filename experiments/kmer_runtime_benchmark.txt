@@ -1,0 +1,6 @@
+MinHash Runtime vs k-mer Size: E. coli
+
+k=15 | Stored hashes: 1000 | Runtime: 14.6084 seconds
+k=21 | Stored hashes: 1000 | Runtime: 14.1937 seconds
+k=31 | Stored hashes: 1000 | Runtime: 15.9658 seconds
+k=41 | Stored hashes: 1000 | Runtime: 22.8931 seconds
