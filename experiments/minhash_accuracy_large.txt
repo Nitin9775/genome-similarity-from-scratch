@@ -1,0 +1,12 @@
+MinHash Accuracy Experiment - Larger Dataset
+
+Sequence length: 3,500
+k=15
+
+Exact Jaccard: 0.500000
+
+Sketch size | MinHash Jaccard | Absolute error
+50          | 0.500000        | 0.000000
+100         | 0.500000        | 0.000000
+500         | 0.500000        | 0.000000
+1000        | 0.500000        | 0.000000
