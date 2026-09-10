@@ -1,0 +1,10 @@
+Ordinary vs Weighted Minimizer Accuracy
+k=15, w=10
+
+Exact Jaccard:              0.539657
+
+Ordinary minimizer Jaccard: 0.527781
+Ordinary error:             0.011876
+
+Weighted minimizer Jaccard: 0.520666
+Weighted error:             0.018992
