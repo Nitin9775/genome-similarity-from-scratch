@@ -504,3 +504,31 @@ def test_cli_minimizer_mode():
     ]
 
     main()
+
+def test_weighted_minimizers_are_reproducible():
+    from src.weighted_minimizers import weighted_minimizers
+
+    sequence = "ATGCGTACGTAGCTAGCTAGCTAGCTAGCTAGCTA"
+
+    result1 = list(weighted_minimizers(sequence, k=5, w=5))
+    result2 = list(weighted_minimizers(sequence, k=5, w=5))
+
+    assert result1 == result2
+
+
+def test_weighted_minimizers_reject_invalid_parameters():
+    from src.weighted_minimizers import weighted_minimizers
+
+    sequence = "ATGCGTACGTAGCTAGCTAG"
+
+    try:
+        list(weighted_minimizers(sequence, k=0, w=5))
+        assert False
+    except ValueError:
+        pass
+
+    try:
+        list(weighted_minimizers(sequence, k=5, w=0))
+        assert False
+    except ValueError:
+        pass
