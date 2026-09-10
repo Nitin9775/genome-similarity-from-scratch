@@ -1,0 +1,31 @@
+MinHash Accuracy Sweep
+Sequence length: 3,500
+k: 15
+
+Mutation step: 10
+Exact Jaccard: 0.000000
+  Sketch size:   50 | MinHash: 0.000000 | Absolute error: 0.000000
+  Sketch size:  100 | MinHash: 0.000000 | Absolute error: 0.000000
+  Sketch size:  500 | MinHash: 0.000000 | Absolute error: 0.000000
+  Sketch size: 1000 | MinHash: 0.000000 | Absolute error: 0.000000
+
+Mutation step: 20
+Exact Jaccard: 0.195312
+  Sketch size:   50 | MinHash: 0.140000 | Absolute error: 0.055312
+  Sketch size:  100 | MinHash: 0.180000 | Absolute error: 0.015313
+  Sketch size:  500 | MinHash: 0.195312 | Absolute error: 0.000000
+  Sketch size: 1000 | MinHash: 0.195312 | Absolute error: 0.000000
+
+Mutation step: 50
+Exact Jaccard: 0.195312
+  Sketch size:   50 | MinHash: 0.140000 | Absolute error: 0.055312
+  Sketch size:  100 | MinHash: 0.180000 | Absolute error: 0.015313
+  Sketch size:  500 | MinHash: 0.195312 | Absolute error: 0.000000
+  Sketch size: 1000 | MinHash: 0.195312 | Absolute error: 0.000000
+
+Mutation step: 100
+Exact Jaccard: 0.195312
+  Sketch size:   50 | MinHash: 0.140000 | Absolute error: 0.055312
+  Sketch size:  100 | MinHash: 0.180000 | Absolute error: 0.015313
+  Sketch size:  500 | MinHash: 0.195312 | Absolute error: 0.000000
+  Sketch size: 1000 | MinHash: 0.195312 | Absolute error: 0.000000
