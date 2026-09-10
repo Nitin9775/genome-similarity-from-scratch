@@ -479,3 +479,11 @@ def test_minhash_approximates_exact_jaccard():
     estimated = sketch1.jaccard(sketch2)
 
     assert abs(estimated - exact) < 0.2
+
+def test_cached_max_hash_matches_actual_maximum():
+    sketch = MinHashSketch(size=3)
+
+    for kmer in ["AAA", "AAC", "AAG", "AAT", "ACA"]:
+        sketch.add(kmer)
+
+    assert sketch._max_hash == max(sketch.hashes)
