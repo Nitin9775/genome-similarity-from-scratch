@@ -1,0 +1,7 @@
+Mash 2.3 external benchmark
+
+E. coli vs Shigella
+Command: mash dist data/ecoli.fasta data/shigella.fasta
+
+Mash distance: 0.0192445
+Shared hashes: 501/1000
