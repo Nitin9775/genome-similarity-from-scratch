@@ -59,19 +59,21 @@ class MinHashSketch:
 
         self.size = size
         self.hashes = set()
+        self._max_hash = None
 
     def add(self, kmer):
         hash_value = int(hashlib.md5(kmer.encode()).hexdigest(), 16)
 
         if len(self.hashes) < self.size:
             self.hashes.add(hash_value)
+            if self._max_hash is None or hash_value > self._max_hash:
+                self._max_hash = hash_value
             return
 
-        largest_hash = max(self.hashes)
-
-        if hash_value < largest_hash:
-            self.hashes.remove(largest_hash)
+        if hash_value < self._max_hash:
+            self.hashes.remove(self._max_hash)
             self.hashes.add(hash_value)
+            self._max_hash = max(self.hashes)
 
     def from_sequence(self, seq, k):
         for kmer in kmerize(seq, k):
