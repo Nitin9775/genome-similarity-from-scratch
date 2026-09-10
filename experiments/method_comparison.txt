@@ -1,0 +1,23 @@
+Genome Similarity Method Comparison
+
+Dataset:
+E. coli vs Shigella
+
+k=15
+MinHash sketch size=1000
+Minimizer window=10
+
+Exact Jaccard:
+0.539657
+
+Our MinHash:
+Jaccard = 0.539000
+Mash distance = 0.0237350
+
+Our Minimizer:
+Jaccard = 0.527781
+Mash distance = 0.0246495
+
+External Mash 2.3:
+Mash distance = 0.0192445
+Shared hashes = 501/1000
