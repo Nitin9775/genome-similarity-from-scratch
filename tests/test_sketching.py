@@ -487,3 +487,20 @@ def test_cached_max_hash_matches_actual_maximum():
         sketch.add(kmer)
 
     assert sketch._max_hash == max(sketch.hashes)
+
+def test_cli_minimizer_mode():
+    from src.cli import main
+    import sys
+
+    sys.argv = [
+        "cli",
+        "data/ecoli.fasta",
+        "data/shigella.fasta",
+        "--k",
+        "5",
+        "--minimizers",
+        "--w",
+        "5",
+    ]
+
+    main()
