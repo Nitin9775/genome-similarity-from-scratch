@@ -1,0 +1,26 @@
+Genome Similarity From Scratch
+Reproducibility Configuration
+
+Python: 3.11.9
+Platform: Windows
+Branch: minimizers
+
+Real genome experiments:
+E. coli: data/ecoli.fasta
+Shigella: data/shigella.fasta
+
+Default k-mer size: 15
+Default MinHash sketch size: 1000
+Default minimizer window: 10
+
+Hash function:
+MD5
+
+Canonical k-mers:
+Yes
+
+Minimizer selection:
+Smallest canonical k-mer hash within each window
+
+Primary comparison:
+Exact Jaccard vs MinHash vs Minimizer Jaccard
