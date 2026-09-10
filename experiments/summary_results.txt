@@ -1,0 +1,124 @@
+Genome Similarity From Scratch
+Experiment Summary
+
+========================================
+1. Exact Jaccard vs MinHash
+========================================
+
+Dataset:
+test.fasta vs test_genome_2.fasta
+
+k=15
+Sketch size=1000
+
+Exact Jaccard:       0.666667
+MinHash Jaccard:     0.666667
+Absolute error:      0.000000
+
+
+========================================
+2. MinHash Accuracy Sweep
+========================================
+
+Synthetic dataset
+Sequence length: 3,500
+k=15
+
+Sketch size | MinHash Jaccard | Absolute error
+50          | 0.666667        | 0.000000
+100         | 0.666667        | 0.000000
+500         | 0.666667        | 0.000000
+1000        | 0.666667        | 0.000000
+
+
+========================================
+3. Larger MinHash Accuracy Experiment
+========================================
+
+Sequence length: 3,500
+k=15
+Exact Jaccard: 0.500000
+
+Sketch size | MinHash Jaccard | Absolute error
+50          | 0.500000        | 0.000000
+100         | 0.500000        | 0.000000
+500         | 0.500000        | 0.000000
+1000        | 0.500000        | 0.000000
+
+
+========================================
+4. MinHash Accuracy Sweep
+========================================
+
+Sequence length: 3,500
+k=15
+
+Mutation step | Exact Jaccard | Sketch 50 error | Sketch 100 error
+10            | 0.000000      | 0.000000        | 0.000000
+20            | 0.195312      | 0.055312        | 0.015313
+50            | 0.195312      | 0.055312        | 0.015313
+100           | 0.195312      | 0.055312        | 0.015313
+
+For sketch sizes 500 and 1000, the reported absolute error was
+0.000000 for all mutation steps.
+
+
+========================================
+5. E. coli vs Shigella: MinHash vs Minimizers
+========================================
+
+k=15
+MinHash sketch size=1000
+Minimizer window=10
+
+Exact Jaccard:       0.539657
+MinHash Jaccard:     0.539000
+MinHash error:       0.000657
+
+Minimizer Jaccard:   0.527781
+Minimizer error:     0.011876
+
+
+========================================
+6. Minimizer Accuracy Sweep
+========================================
+
+k=15
+Exact Jaccard: 0.539657
+
+Window | E. coli minimizers | Shigella minimizers | Jaccard   | Error
+5      | 1,494,480          | 1,436,830            | 0.533538  | 0.006119
+10     | 816,575            | 784,905              | 0.527781  | 0.011876
+20     | 428,206            | 412,133              | 0.517282  | 0.022375
+50     | 176,237            | 169,840              | 0.502320  | 0.037337
+100    | 89,107             | 85,667               | 0.494291  | 0.045366
+
+
+========================================
+7. E. coli MinHash Benchmark
+========================================
+
+k=15
+
+Sketch size | Stored hashes | Runtime
+100         | 100           | 14.5992 s
+500         | 500           | 13.1053 s
+1000        | 1000          | 13.2160 s
+5000        | 5000          | 20.9140 s
+
+
+========================================
+8. E. coli MinHash vs Minimizer Runtime
+========================================
+
+k=15
+MinHash sketch size=1000
+Minimizer window=10
+
+MinHash stored hashes:     1000
+MinHash runtime:            13.6265 seconds
+
+Minimizer stored hashes:    816575
+Minimizer runtime:          14.0932 seconds
+
+Runtime ratio (MinHash / Minimizer): 0.97x
