@@ -1,0 +1,10 @@
+MinHash vs Minimizer Benchmark: E. coli
+k=15, sketch_size=1000, w=10
+
+MinHash stored hashes:     1000
+MinHash runtime:            13.6265 seconds
+
+Minimizer stored hashes:    816575
+Minimizer runtime:          14.0932 seconds
+
+Runtime ratio (MinHash / Minimizer): 0.97x
