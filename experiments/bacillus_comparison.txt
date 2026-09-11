@@ -1,0 +1,13 @@
+Bacillus subtilis vs Bacillus cereus
+
+Our MinHash:
+Jaccard = 0.012
+Mash distance = 0.2494420
+
+Our Minimizer:
+Jaccard = 0.0150471
+Mash distance = 0.2345572
+
+External Mash 2.3:
+Mash distance = 0.295981
+Shared hashes = 1/1000
