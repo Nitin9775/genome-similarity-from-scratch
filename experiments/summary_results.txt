@@ -127,3 +127,9 @@ E. coli vs Shigella, k=15, w=10
 Ordinary error: 0.011876
 Weighted error: 0.019010
 Conclusion: Simple complexity-based weighting changed minimizer selection but did not improve accuracy or runtime.
+
+Bacillus subtilis vs Bacillus cereus:
+Our MinHash Mash distance: 0.2494420
+Our Minimizer Mash distance: 0.2345572
+External Mash 2.3 distance: 0.295981
+External Mash shared hashes: 1/1000
